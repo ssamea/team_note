@@ -9,7 +9,7 @@ arr.sort()
 def binary_search(arr, target, start, end):
     while start <= end:
 
-        mid=(start+end) //2
+        mid=(start+end) // 2
 
         if target < arr[mid]: # 탐색 값이 기준점보다 작다면
             end= mid-1
@@ -21,7 +21,13 @@ def binary_search(arr, target, start, end):
             start=mid+1
 
     return None
-
+    """
+    배열 요소개수 카운팅 코드
+    a.sort()
+    right_index = bisect_right(a, right)
+    left_index = bisect_left(a, left)
+    return right_index - left_index
+    """
 
 result=binary_search(arr,target,0,n-1)
 
