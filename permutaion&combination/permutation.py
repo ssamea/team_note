@@ -3,7 +3,7 @@
 def permutation(arr, r):
     # 1.
     arr = sorted(arr)
-    used = [0 for _ in range(len(arr))] #i 번째 값을 썼는지 저장하는 데 쓰임
+    used = [0]*len(arr) #i 번째 값을 썼는지 저장하는 데 쓰임
 
     def generate(chosen, used):
         # 2. chosen 변수는 순열의 원소를 저장되는 변수, 이 배열에 값을 하나씩 추가하다가 그 개수가 r 이 되는 순간 하나의 순열이 만들어진 것
