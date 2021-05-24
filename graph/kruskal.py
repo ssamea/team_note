@@ -1,4 +1,4 @@
-# 크루스칼 알고리즘 - 최소신장트리 -> 최소비용이 드는 경로를 탐색하는 알고리즘
+# 크루스칼 알고리즘 - 최소신장트리중 하나 -> 최소비용이 드는 경로를 탐색하는 알고리즘
 # 사이클이 존재하면 안되면서 모든 노드는 한번씩 거쳐가야함
 # 간선 데이터를 비용에 따라 오름차순으로 정렬-> 사이클 발생 유무 확인
 # 최종적으로 가면 간선의 갯수는 '노드-1'개가 된다.
@@ -13,14 +13,14 @@ def find_parent(parent, x):
 
 # 두 원소가 속한 집합을 찾기
 def union_parent(parent, a, b):
-    a=find_parent(parent,a)
-    b=find_parent(parent,b)
+    a = find_parent(parent,a)
+    b = find_parent(parent,b)
 
-    if a>b:
-        parent[b]=a
+    if a > b:
+        parent[b] = a
 
     else:
-        parent[a]=b
+        parent[a] = b
 
 # 노드의 개수와 간선의 개수 입력
 v, e = map(int,input().split())

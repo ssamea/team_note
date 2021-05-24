@@ -22,7 +22,7 @@ parent=[0]*(v+1) #부모 테이블 초기화
 for i in range(1,v+1):
     parent[i]=i
 
-cycle=False #사이클 발생 여부
+cycle = False #사이클 발생 여부
 
 for i in range(e):
     a,b=map(int,input().split())
