@@ -17,3 +17,24 @@ for start in range(len(arr)):
     interval_sum -= arr[start]
 
 print(cnt)  # 3
+
+"""
+# 리스트에서 특정 값 찾기
+import sys
+input=sys.stdin.readline
+N = int(input())
+arr = list(map(int, input().split()))
+X = int(input())
+arr.sort()
+left, right = 0, N - 1
+ans = 0
+
+while left < right:
+    tmp = arr[left] + arr[right]
+    if tmp == X: ans += 1
+    if tmp < X:
+        left += 1
+        continue
+    right -= 1
+print(ans)
+"""

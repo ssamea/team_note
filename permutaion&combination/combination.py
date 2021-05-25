@@ -10,8 +10,8 @@ def combination(arr, r):
             print(chosen)
             return
 
-        # 3.
-        start = arr.index(chosen[-1]) + 1 if chosen else 0 # 시작을 chosen 에 저장된 마지막 값 다음으로 정한다 => 순서를 고려하지 않고 뽑기 때문에, 가짓수를 제한해줘야 한다
+        # 3. 시작을 chosen 에 저장된 마지막 값 다음으로 정한다 => 순서를 고려하지 않고 뽑기 때문에, 가짓수를 제한해줘야 한다
+        start = arr.index(chosen[-1]) + 1 if chosen else 0
         for i in range(start, len(arr)):
             if used[i] == 0 and (i == 0 or arr[i-1] != arr[i] or used[i-1]):
                 chosen.append(arr[i])
