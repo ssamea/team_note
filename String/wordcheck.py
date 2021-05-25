@@ -13,5 +13,4 @@ for word in words:
 
 sorted_words = sorted([(k, v) for k, v in words_count.items()], key=lambda word_count: -word_count[1]) # key = functools.cmp_to_key(comparator)
 print([w[0] for w in sorted_words])
-
-print(sorted_words[0])
+print(sorted_words[0]) # sorted_words[0][0] -> dog만 출력
