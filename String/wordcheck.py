@@ -3,7 +3,7 @@ words = ["dog","dog","a","cat","cat","b"]
 words_count={}
 
 def comparator(x, y):
-    return x[0]*x[1]-y[0]*y[1]
+    return x[0] * x[1] - y[0] * y[1]
 
 for word in words:
     if word in words_count:

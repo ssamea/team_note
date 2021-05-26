@@ -4,12 +4,14 @@
 # 최종적으로 가면 간선의 갯수는 '노드-1'개가 된다.
 # 걍 각 스텝마다 가장 작은 비용 간선을 선택하면 된다
 
+
 # 특정 원소가 속한 집합 찾기
 def find_parent(parent, x):
     # 루트 노드가 아니라면, 루느 토드를 찾을 때까지 재귀적으로 호출
     if parent[x] != x:
         parent[x]=find_parent(parent,parent[x])
     return parent[x]
+
 
 # 두 원소가 속한 집합을 찾기
 def union_parent(parent, a, b):
@@ -21,6 +23,7 @@ def union_parent(parent, a, b):
 
     else:
         parent[a] = b
+
 
 # 노드의 개수와 간선의 개수 입력
 v, e = map(int,input().split())
@@ -39,15 +42,17 @@ for i in range(e):
     a, b, cost = map(int,input().split())
     edges.append((cost,a,b))
 
-#간선을 비용순으로 정렬
+# 간선을 비용순으로 정렬
 edges.sort()
 
-#간선을 하나씩 확인
+# 간선을 하나씩 확인
 for edge in edges:
     cost,a,b=edge
 
     if find_parent(parent,a)!= find_parent(parent,b):
         union_parent(parent,a,b)
-        result+=cost
+        result += cost
+
 
 print(result)
+
