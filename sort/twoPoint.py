@@ -1,4 +1,6 @@
 # 투포인터
+
+"""
 # 부분 연속 수열 개수  찾기
 n = int(input()) # 리스트 길이
 m = int(input()) # 찾고자하는 특정 값
@@ -19,7 +21,7 @@ for start in range(len(arr)):
 print(cnt)  # 3
 
 """
-# 리스트에서 특정 값 찾기
+# 리스트에서 자연수 x가 주어졌을 때, ai + aj = x (1 ≤ i < j ≤ n)을 만족하는 (ai, aj)쌍의 수를 구하는 프로그램
 import sys
 input=sys.stdin.readline
 N = int(input())
@@ -37,4 +39,3 @@ while left < right:
         continue
     right -= 1
 print(ans)
-"""
