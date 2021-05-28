@@ -31,7 +31,7 @@ def BFS(graph, root):
     return " ".join(str(i) for i in visited)
 
 
-graph = {}
+graph = {}  # 딕셔너리
 n = input().split(' ')
 node, edge, start = [int(i) for i in n]
 for i in range(edge):

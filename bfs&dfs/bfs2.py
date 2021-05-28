@@ -1,4 +1,5 @@
 # 단지번호 (단지 갯수와 각 단지의 1갯수)
+#  1은 집이 있는 곳을, 0은 집이 없는 곳을 나타낸다.
 
 import sys
 from collections import deque
