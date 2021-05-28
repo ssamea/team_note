@@ -6,11 +6,10 @@
 
 def solution(tickets):
     answer = []
-
-    graph = {i[0]: [] for i in tickets}  # 키값만 삽입
+    graph = {i[0]: [] for i in tickets}  # 키값만 삽입 => graph = {'ICN': [], 'HND': [], 'JFK': []}
 
     for i in tickets:  # 키에 해당하는 value 값 삽입
-        graph[i[0]].append(i[1])
+        graph[i[0]].append(i[1])    # => graph = {'ICN': ['JFK'], 'HND': ['IAD'], 'JFK': ['HND']}
 
     for i in graph.keys():
         graph[i].sort(reverse=True)  # stack을 활용하기 때문에 오름차순으로 정렬한다.(그래야 B,A에서 A부터 뽑음)
@@ -18,7 +17,7 @@ def solution(tickets):
     stack = ["ICN"]
 
     while stack:
-        top = stack[-1]  # stack의 최상단 값을 뽑음
+        top = stack[-1]  # stack의 최상단 값을 저장
 
         # 현재 공항에서 출발하는 항공권 자체가 없거나 이미 사용해서 더이상 없는 경우 result에 stack의 pop()한 값을 삽입
         if top not in graph or len(graph[top]) == 0:
