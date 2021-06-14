@@ -7,10 +7,12 @@ x = int(input()) # 수열의 크기
 arr = list(map(int, input().split())) # 수열 입력
 
 dp = [1]*x
+lis=[]
 
 for i in range(x): # 0, 1, 2, 3, 4
     for j in range(i):
         if arr[i] > arr[j]:
             dp[i] = max(dp[i], dp[j]+1)
+            lis.append(arr[i])
 
 print(max(dp))
