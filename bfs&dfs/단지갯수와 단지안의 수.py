@@ -19,10 +19,11 @@ def bfs(cnt, x, y):
     return cnt
 
 
-n= int(input())
-graph=[list(map(int,list(input()))) for _ in range(n)]
-# 방문 내역 저장용 visited
-ans=[]
+n = int(input())
+graph = [list(map(int, list(input()))) for _ in range(n)]
+
+
+ans = []  # 각 단지안에 존재하는 1의 갯수를 담을 리스트
 
 
 # 위 아래 왼 오 방향이동용 리스트
@@ -36,5 +37,5 @@ for i in range(n):
 
 print(len(ans))
 
-for i in sorted(ans):
+for i in sorted(ans):  # 정렬한 이유는 문제에서 오름차순으로 정렬 하라해서.
     print(i)
