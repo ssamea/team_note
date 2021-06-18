@@ -11,7 +11,7 @@ graph=[[INF]*(n+1) for _ in range(n+1)]
 # 자기 자신에서 자기 자신으로 가능 비용은 0으로 초기화
 for a in range(1,n+1):
     for b in range(1,n+1):
-        if a==b:
+        if a == b:
             graph[a][b]=0
 
 
@@ -25,9 +25,9 @@ for _ in range(e):
 # x,k=map(int,input().split()) # 거쳐갈 노드 x와 최종목적지 k
 
 # 점화식에 따라 플로이드 워셜 알고리즘 수행
-for k in range(1,n+1): #첫번째 반복문 - 거쳐가는 정점.
-    for a in range(1,n+1): #두번째 반복문 - 출발하는 정점.
-        for b in range(1,n+1): #세번째 반복문 - 도착하는 정점
+for k in range(1, n+1):  #첫번째 반복문 - 거쳐가는 정점.
+    for a in range(1, n+1):  #두번째 반복문 - 출발하는 정점.
+        for b in range(1, n+1):  #세번째 반복문 - 도착하는 정점
             graph[a][b]=min(graph[a][b], graph[a][k]+graph[k][b])
 
 # res=graph[1][k]+graph[k][x] #결과값
