@@ -5,7 +5,7 @@ from collections import deque
 
 def solution(priorities, location):
     answer = 0
-    q = deque([(v, i) for i, v in enumerate(priorities) ])
+    q = deque([(v, i) for i, v in enumerate(priorities)])
 
     while q:
         a = q.popleft()    # 1. 인쇄 대기목록의 가장 앞에 있는 문서(J)를 대기목록에서 꺼냅니다.
