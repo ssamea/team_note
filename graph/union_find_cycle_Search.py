@@ -27,10 +27,10 @@ for i in range(1,v+1):
 cycle = False  #사이클 발생 여부
 
 for i in range(e):
-    a, b=map(int,input().split())
+    a, b = map(int,input().split())
 
     if find_parent(parent,a)== find_parent(parent,b):
-        cycle=True
+        cycle = True
         break
     else:
         union_parent(parent,a,b)

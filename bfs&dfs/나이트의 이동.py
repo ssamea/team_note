@@ -16,7 +16,7 @@ def bfs(s_x,s_y,d_x,d_y):
     while q:
         a, b = q.popleft()
 
-        if a == d_x and b== d_y:
+        if a == d_x and b == d_y:
             print(graph[d_x][d_y]-1)
             return
 
